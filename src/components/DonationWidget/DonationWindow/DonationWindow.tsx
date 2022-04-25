@@ -45,8 +45,9 @@ const DonationWindow = (props) => {
             <label htmlFor="donationInput">Donation Amount</label>
             <span>$</span>
             <input
+              type="number"
               id="donationInput"
-              placeholder="Enter donation amount"
+              placeholder="Enter donation"
               defaultValue={donationAmount}
               onChange={(e) => setDonationAmount(e.target.value)}
             ></input>
