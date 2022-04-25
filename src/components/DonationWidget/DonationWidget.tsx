@@ -4,7 +4,7 @@ import NotificationBox from "./NotificationBox/NotificationBox";
 
 const DonationWidget: React.FC = () => {
   const [totalDonation, setTotalDonation] = useState(0);
-  const [backers, setBackers] = useState();
+  const [backers, setBackers] = useState(null);
 
   return (
     <main>

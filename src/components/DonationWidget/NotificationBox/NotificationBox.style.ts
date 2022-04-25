@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const NotificationContainer = styled.div`
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
     `
 
 export const NeededNotification = styled.aside`
@@ -12,7 +13,7 @@ export const NeededNotification = styled.aside`
 
     p {
         background-color: #e4ebfd;
-        padding: 10px 15px;
+        padding: 12px 15px;
         margin: 0;
         border-radius: 5px;
         width: 100%;
@@ -47,7 +48,7 @@ export const FundedNotification = styled.aside`
 
     p {
         background-color: rgba(28,203,161,1);
-        padding: 10px 15px;
+        padding: 12px 15px;
         margin: 0;
         border-radius: 5px;
         width: 100%;

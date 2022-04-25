@@ -8,7 +8,7 @@ export const WindowContainer = styled.section `
     background-color: white;
 
     article {
-        padding: 20px 40px;
+        padding: 45px 40px;
     }
 
     h1 {
@@ -16,20 +16,23 @@ export const WindowContainer = styled.section `
         font-size: 30px;
         font-family: 'Poppins', sans-serif;
         font-weight: 700;
+        margin: 0;
+        line-height: 1.4;
     }
 
     p {
         text-align: left;
         font-size: 20px;
         font-family: 'IBM Plex Sans', sans-serif;
+        line-height: 1.2;
         color: #555;
         font-weight: 500;
+        margin: 20px 0 45px 0;
     }
 
     form {
         font-family: 'IBM Plex Sans', sans-serif;
         display: flex;
-        margin: 40px 0 30px 0;
     }
 
     form div {
@@ -50,27 +53,35 @@ export const WindowContainer = styled.section `
     form span {
         display: flex;
         position: absolute;
-        float: left;
         height: 70px;
         align-items: center;
         justify-content: center;
-        width: 40px;
+        width: 50px;
         color: gray;
-        font-size: 24px;
+        font-size: 30px;
         box-sizing: border-box;
-        margin-top: -3px;
+        font-family: 'IBM Plex Sans', sans-serif;
     }
 
     form input {
+        font-family: 'IBM Plex Sans', sans-serif;
         height: 70px;
         box-sizing: border-box;
         width: 100%;
-        padding: 0 30px;
-        font-size: 24px;
+        padding: 0 5px 0 40px;
+        font-size: 30px;
         font-weight: bold;
         vertical-align: baseline;
         border-radius: 7px 0 0 7px;
         border: 1px solid lightgray;
+    }
+
+    form input:focus {
+        box-shadow: 0 0 15px rgb(28,203,161);
+    }
+
+    form input:active {
+        box-shadow: 0 0 15px rgb(28,203,161);
     }
 
     form button {
@@ -94,4 +105,9 @@ export const WindowContainer = styled.section `
         box-shadow: 0 0 15px green;
     }
 
+    .invalid {
+        color: red;
+        font-size: 16px;
+        margin: 10px 0 -25px 0;
+    }
 `

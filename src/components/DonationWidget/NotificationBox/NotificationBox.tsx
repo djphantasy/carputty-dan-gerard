@@ -14,17 +14,17 @@ const NotificationBox = (props) => {
       {totalDonation < 5000 ? (
         <NeededNotification>
           <p>
-          <sup>$</sup>
-          <strong>{neededDonation}</strong>
-          &nbsp;still needed to fund this project
+            <sup>$</sup>
+            <strong>{neededDonation.toLocaleString("en-US")}</strong>
+            &nbsp;still needed to fund this project
           </p>
         </NeededNotification>
       ) : (
         <FundedNotification>
           <p>
-          This project was fully funded with a total of&nbsp;
-          <sup>$</sup>
-          <strong>{totalDonation}</strong>
+            This project was fully funded with a total of&nbsp;
+            <sup>$</sup>
+            <strong>{totalDonation.toLocaleString("en-US")}</strong>
           </p>
         </FundedNotification>
       )}
