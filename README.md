@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# Carputty Frontend Coding Challenge for Dan Gerard
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## General Directions
 
-In the project directory, you can run:
+Please develop the above design sharing the code how you wish—CodePen, GitHub, Bitbucket or the alike. In doing so, please follow the
+following guidelines:
 
-### `npm start`
+* The total goal for donations is $5,000
+* Any given donation cannot be below $5
+* Upon receiving a donation, the total still needed, progress bar, and number of donors should all be updated
+* Use React to build the component
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Notes
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* The Poppins and IBM Flex Sans typefaces may be found on Google Fonts
 
-### `npm test`
+## Bonus Points
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Use Saas or Emotion as a preprocess for your CSS
+* Add active, hover, success, and error states according
 
-### `npm run build`
+## Solution
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This app uses create-react-app as a starting point to set up a basic typescript app template. From there, I imported my React component inside of App.tsx. The app makes use of Google Fonts to import the needed Poppins and IBM Flex Sans fonts. I also choose to install the 'styled-components' package as an alternative to Emotion to style my components. Also the number-to-words package was also installed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### DonationWidget
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This component contains the 2 main elements of the app. The NotificationBox aside that states the funding status of the project and the DonationWindow which includes the progress bar, descriptive text, and input form. This component also declares the variables for holding the total donations and the number of project backers.
 
-### `npm run eject`
+### NotificationBox
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Displays an aside element that tells the user how much is left to fund the project. Once the project has been funded, the aside will change to state how much was funded in total.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### DonationWindow
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Component contains a heading that states how many days are left to fund the project. Gives a call to action below the heading that displays the total number of backers. If there are currently no backers, a different call to action is displayed. Form with a single, number input field to indicate the donation amount. Form is submitted on enter key or submit button press. If there is a donation amount over $5 then the donation is added to the totalDonation, the backers are incremented, and an alert message is shown. If not, an error alert is shown.

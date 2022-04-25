@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import ProgressBar from "./ProgressBar/ProgressBar";
 import { WindowContainer } from "./DonationWindow.style";
 
+var converter = require('number-to-words');
+
 const DonationWindow = (props) => {
   const totalDonation = props.totalDonation;
   const setTotalDonation = props.setTotalDonation;
   const backers = props.backers;
   const setBackers = props.setBackers;
+  const daysLeft: number = 4;
 
   // Sets the donation amount from the input field.
   const [donationAmount, setDonationAmount] = useState("");
@@ -35,7 +38,7 @@ const DonationWindow = (props) => {
     <WindowContainer>
       <ProgressBar totalDonation={totalDonation} />
       <article>
-        <h1>Only four days left to fund this project</h1>
+        <h1>Only {converter.toWords(daysLeft)} days left to fund this project</h1>
         {backers && (
           <p>
             Join the <strong>{backers}</strong> other donors who have already
@@ -59,7 +62,7 @@ const DonationWindow = (props) => {
               onChange={(e) => setDonationAmount(e.target.value)}
             ></input>
           </div>
-          <button type="submit" value="DONATE">
+          <button type="submit" value="DONATE" title="Submit donation">
             Give Now
           </button>
         </form>
